@@ -1,7 +1,11 @@
 import streamlit as st
-import spacy
-import os
-os.system("python -m spacy download en_core_web_sm")
+try:
+    import spacy
+except ModuleNotFoundError:
+    import os
+    os.system("pip install spacy==3.7.2")
+    os.system("pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz")
+    import spacy
 from bs4 import BeautifulSoup
 import joblib
 

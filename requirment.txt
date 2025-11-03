@@ -1,0 +1,6 @@
+streamlit
+spacy
+beautifulsoup4
+joblib
+lightgbm
+scikit-learn
